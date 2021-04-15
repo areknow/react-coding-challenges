@@ -48,6 +48,5 @@ Web sockets, events, callbacks & React hooks. Talks to [Botty](https://github.co
 | ----------- | --------- |
 | Rocket Ship | 🚧        |
 | Dark Mode   | ⛔️       |
-| Coinbee     | ⛔️       |
 | Spootify    | ⛔️       |
 | Chatter     | ⛔️       |
