@@ -24,10 +24,6 @@ Unecessary re-renders, fine grained control.
 
 State / shared state, DOM manipulation.
 
-##### 🐝 Coinbee ![soon](https://badgen.net/badge/status/coming%20soon/green?icon=)
-
-Data visualisation and graphing. API usage.
-
 &nbsp;
 
 ### Hard 😬
