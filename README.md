@@ -43,6 +43,6 @@ Web sockets, events, callbacks & React hooks. Talks to [Botty](https://github.co
 | Challenge   | Completed |
 | ----------- | --------- |
 | Rocket Ship | ✅        |
-| Dark Mode   | ⛔️       |
+| Dark Mode   | ✅        |
 | Spootify    | ⛔️       |
 | Chatter     | ⛔️       |
