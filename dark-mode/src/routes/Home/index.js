@@ -3,7 +3,7 @@ import "./_styles.scss";
 
 export const Home = () => {
   return (
-    <div className="form">
+    <div className="home">
       <div className="level">
         <div>
           <h1 className="title">Dark Mode Challenge</h1>
