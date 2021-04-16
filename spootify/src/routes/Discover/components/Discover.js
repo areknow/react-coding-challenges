@@ -10,6 +10,7 @@ export const Discover = () => {
   const [categories, setCategories] = useState([]);
 
   const { requestHeader } = useSpotifyContext();
+  console.log(requestHeader);
 
   useEffect(() => {
     async function fetchData() {
@@ -17,7 +18,7 @@ export const Discover = () => {
         "https://api.spotify.com/v1/browse/new-releases",
         requestHeader
       );
-      console.log(response.data);
+      setNewReleases(response.data.albums.items);
     }
     fetchData();
   }, [requestHeader]);
