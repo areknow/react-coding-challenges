@@ -4,7 +4,7 @@ import "./_styles.scss";
 export const About = () => {
   return (
     <div className="about">
-      <h1>Lorem ipsum</h1>
+      <h1 className="title">Lorem ipsum</h1>
       <p>
         Ut culpa culpa nisi sint aliqua ullamco. Duis non labore duis sit
         occaecat. Cupidatat eu duis nostrud mollit officia veniam. In velit
