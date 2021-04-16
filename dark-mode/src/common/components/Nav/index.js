@@ -2,9 +2,12 @@ import { faMoon } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { Link } from "react-router-dom";
+import { useThemeContext } from "../../context/Theme";
 import "./_styles.scss";
 
 export const Nav = () => {
+  const { toggleDarkMode } = useThemeContext();
+
   return (
     <nav className="nav">
       <ul>
@@ -16,7 +19,7 @@ export const Nav = () => {
         </li>
       </ul>
       <div className="dark-mode-toggle">
-        <button onClick={() => console.log(1)}>
+        <button onClick={() => toggleDarkMode()}>
           <FontAwesomeIcon icon={faMoon} />
         </button>
       </div>
