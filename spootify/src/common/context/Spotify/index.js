@@ -16,8 +16,14 @@ export const SpotifyProvider = ({ children }) => {
     setContext({ token: value });
   };
 
+  const requestHeader = {
+    headers: {
+      Authorization: "Bearer " + context.token,
+    },
+  };
+
   return (
-    <Context.Provider value={{ setToken, token: context.token }}>
+    <Context.Provider value={{ setToken, header: requestHeader }}>
       {children}
     </Context.Provider>
   );

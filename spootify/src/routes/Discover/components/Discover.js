@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { useSpotifyContext } from "../../../common/context/Spotify";
 import "../styles/_discover.scss";
 import DiscoverBlock from "./DiscoverBlock/components/DiscoverBlock";
 
@@ -8,15 +9,18 @@ export const Discover = () => {
   const [playlists, setPlaylists] = useState([]);
   const [categories, setCategories] = useState([]);
 
+  const { requestHeader } = useSpotifyContext();
+
   useEffect(() => {
     async function fetchData() {
       const response = await axios.get(
-        "https://api.spotify.com/v1/browse/new-releases"
+        "https://api.spotify.com/v1/browse/new-releases",
+        requestHeader
       );
       console.log(response.data);
     }
-    // fetchData();
-  }, []);
+    fetchData();
+  }, [requestHeader]);
 
   return (
     <div className="discover">
