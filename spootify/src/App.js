@@ -1,10 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import Login from "./common/components/Login";
+import { useSpotifyContext } from "./common/context/Spotify";
 import Routes from "./routes";
 import { getTokenFromUrl } from "./spotify";
 
 export const App = () => {
-  const [token, setToken] = useState();
+  const { token, setToken } = useSpotifyContext();
 
   useEffect(() => {
     const hash = getTokenFromUrl();
@@ -14,7 +15,7 @@ export const App = () => {
     if (_token) {
       setToken(_token);
     }
-  }, [token]);
+  }, [setToken, token]);
 
   return !token ? <Login /> : <Routes />;
 };
