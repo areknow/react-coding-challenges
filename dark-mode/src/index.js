@@ -1,12 +1,6 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import AppContainer from './common/containers/App';
-import './styles/_main.scss';
-import Routes from './routes';
+import React from "react";
+import ReactDOM from "react-dom";
+import { App } from "./App";
+import "./styles/_main.scss";
 
-ReactDOM.render(
-  <AppContainer>
-    <Routes />
-  </AppContainer>,
-  document.getElementById('root')
-);
+ReactDOM.render(<App />, document.getElementById("root"));
