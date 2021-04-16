@@ -1,0 +1,23 @@
+.login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  svg {
+    width: 400px;
+    margin-bottom: 50px;
+  }
+  a {
+    padding: 10px 50px;
+    background: #57b560;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+  }
+}
