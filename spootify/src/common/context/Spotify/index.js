@@ -23,7 +23,9 @@ export const SpotifyProvider = ({ children }) => {
   };
 
   return (
-    <Context.Provider value={{ setToken, header: requestHeader }}>
+    <Context.Provider
+      value={{ setToken, token: context.token, requestHeader: requestHeader }}
+    >
       {children}
     </Context.Provider>
   );

@@ -8,17 +8,25 @@ export const Discover = () => {
   const [newReleases, setNewReleases] = useState([]);
   const [playlists, setPlaylists] = useState([]);
   const [categories, setCategories] = useState([]);
-
   const { requestHeader } = useSpotifyContext();
-  console.log(requestHeader);
 
   useEffect(() => {
     async function fetchData() {
-      const response = await axios.get(
+      const releases = await axios.get(
         "https://api.spotify.com/v1/browse/new-releases",
         requestHeader
       );
-      setNewReleases(response.data.albums.items);
+      const playlists = await axios.get(
+        "https://api.spotify.com/v1/browse/featured-playlists",
+        requestHeader
+      );
+      const categories = await axios.get(
+        "https://api.spotify.com/v1/browse/categories",
+        requestHeader
+      );
+      setNewReleases(releases.data.albums.items);
+      setPlaylists(playlists.data.playlists.items);
+      setCategories(categories.data.categories.items);
     }
     fetchData();
   }, [requestHeader]);

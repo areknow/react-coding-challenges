@@ -15,7 +15,7 @@ export const App = () => {
     if (_token) {
       setToken(_token);
     }
-  }, [setToken, token]);
+  }, [setToken]);
 
   return !token ? <Login /> : <Routes />;
 };
